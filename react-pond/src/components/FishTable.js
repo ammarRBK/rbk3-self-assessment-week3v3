@@ -1,12 +1,13 @@
 var FishTable = () => (
   <table>
     <tbody>
-      <FishTableRow />
-      <FishTableRow />
-      <FishTableRow />
+      <FishTableRow {fishData[0]} />
+      // <FishTableRow fishData[] />
+      // <FishTableRow fishData data={data}/>
     </tbody>
   </table>
 );
+
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
