@@ -1,18 +1,14 @@
-var FishTable = () => (
-  <table>
-    <tbody>
-      <FishTableRow {fishData[0]} />
-      // <FishTableRow fishData[] />
-      // <FishTableRow fishData data={data}/>
+var FishTable = function(fishes){
+	<table>
+	<tbody>
+	{props.fishes.map(fish => <FishTableRow fish={fish}/>)}
     </tbody>
-  </table>
-);
-
-
+    </table>
+   } ;
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 FishTable.propTypes = {
-  fishes: React.PropTypes.array.isRequired
+	fishes: React.PropTypes.array.isRequired
 };
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
